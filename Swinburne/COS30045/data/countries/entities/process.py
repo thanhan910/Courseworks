@@ -90,7 +90,7 @@ def inspect_with_wb():
 
 def insepct_with_weo():
     # read weo dataset
-    path, url = weo.download(2022, 1)
+    path, url = weo.download(2022, 1, filename="output/weo_2022_1.csv")
     print(path, url)
     # weo_2022_1.csv 18.8Mb
     # Downloaded 2022-Apr WEO dataset
