@@ -2,7 +2,7 @@
 
 This dataset contains a comprehensive list of all countries, entities, each entity's ISO code and group classification. It serves as a conversion of ISO codes between country codes used in [Our World in Data (OWID)](https://ourworldindata.org/)'s datasets, country codes used in [World Bank (WB)'s World Development Indicators (WDI)](https://data.worldbank.org/), and country codes used in the [Internation Monetary Fund (IMF)'s World Economic Outlook (WEO)](https://www.imf.org/en/Publications/WEO/weo-database/2022/April).
 
-The dataset is available in the [entities.csv](/entities.csv) file. We used the [process.py](/process.py) to collect and process the data.
+The dataset is available in the [entities.csv](/entities.csv) file. We used the [process.py](/process.py) script to collect and process the data.
 
 ## Available entities
 
