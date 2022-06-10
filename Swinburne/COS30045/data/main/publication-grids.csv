@@ -1,0 +1,51 @@
+,id,publication,state,code,col,row
+0,1,New York Times 2,Alaska,AK,3,1
+1,2,New York Times 2,Washington,WA,3,3
+2,3,New York Times 2,Oregon,OR,3,4
+3,4,New York Times 2,California,CA,3,5
+4,5,New York Times 2,Hawaii,HI,3,8
+5,6,New York Times 2,Idaho,ID,4,3
+6,7,New York Times 2,Nevada,NV,4,4
+7,8,New York Times 2,Utah,UT,4,5
+8,9,New York Times 2,Arizona,AZ,4,6
+9,10,New York Times 2,Montana,MT,5,3
+10,11,New York Times 2,Wyoming,WY,5,4
+11,12,New York Times 2,Colorado,CO,5,5
+12,13,New York Times 2,New Mexico,NM,5,6
+13,14,New York Times 2,North Dakota,ND,6,3
+14,15,New York Times 2,South Dakota,SD,6,4
+15,16,New York Times 2,Nebraska,NE,6,5
+16,17,New York Times 2,Kansas,KS,6,6
+17,18,New York Times 2,Oklahoma,OK,6,7
+18,19,New York Times 2,Texas,TX,6,8
+19,20,New York Times 2,Minnesota,MN,7,3
+20,21,New York Times 2,Iowa,IA,7,4
+21,22,New York Times 2,Missouri,MO,7,5
+22,23,New York Times 2,Arkansas,AR,7,6
+23,24,New York Times 2,Louisiana,LA,7,7
+24,25,New York Times 2,Wisconsin,WI,8,2
+25,26,New York Times 2,Illinois,IL,8,3
+26,27,New York Times 2,Indiana,IN,8,4
+27,28,New York Times 2,Kentucky,KY,8,5
+28,29,New York Times 2,Tennessee,TN,8,6
+29,30,New York Times 2,Mississippi,MS,8,7
+30,31,New York Times 2,Michigan,MI,9,3
+31,32,New York Times 2,Ohio,OH,9,4
+32,33,New York Times 2,West Virginia,WV,9,5
+33,34,New York Times 2,North Carolina,NC,9,6
+34,35,New York Times 2,Alabama,AL,9,7
+35,36,New York Times 2,Pennsylvania,PA,10,4
+36,37,New York Times 2,Virginia,VA,10,5
+37,38,New York Times 2,South Carolina,SC,10,6
+38,39,New York Times 2,Georgia,GA,10,7
+39,40,New York Times 2,New York,NY,11,3
+40,41,New York Times 2,New Jersey,NJ,11,4
+41,42,New York Times 2,Maryland,MD,11,5
+42,43,New York Times 2,Florida,FL,11,8
+43,44,New York Times 2,Vermont,VT,12,2
+44,45,New York Times 2,Massachusetts,MA,12,3
+45,46,New York Times 2,Connecticut,CT,12,4
+46,47,New York Times 2,Delaware,DE,12,5
+47,48,New York Times 2,Maine,ME,13,1
+48,49,New York Times 2,New Hampshire,NH,13,2
+49,50,New York Times 2,Rhode Island,RI,13,4
