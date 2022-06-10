@@ -20,8 +20,8 @@ SOURCES = {
             "csv": "usstates/data.csv"
         },
         "info": {
-            "json": "usstates/info.json",
-            "csv": "usstates/info.csv"
+            "json": "usstates/info/info.json",
+            "csv": "usstates/info/info.csv"
         }
     },
     "tilegrid": {
@@ -142,8 +142,8 @@ df_countries = df_countries[
 
 df_usstates = df_usstates[df_usstates["Year"].isin(USSTATES_NEEDED_YEARS)]
 
-df_countries.to_csv("countries_data.csv")
-df_usstates.to_csv("usstates_data.csv")
+df_countries.to_csv("countries_data.csv", index=False)
+df_usstates.to_csv("usstates_data.csv", index=False)
 
 # download info data
 
@@ -153,6 +153,6 @@ pd.read_json(DIRECTORY + SOURCES["usstates"]["info"]["json"],orient="index").agg
 
 ## download tile grid data
 
-pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["links"]).to_csv("links.csv")
+pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["links"]).to_csv("links.csv", index=False)
 
-pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["publication-grids"]).to_csv("publication-grids.csv")
+pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["publication-grids"]).to_csv("publication-grids.csv", index=False)
