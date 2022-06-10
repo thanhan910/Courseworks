@@ -1,5 +1,4 @@
 import pandas as pd
-from pyparsing import col
 import world_bank_data as wb
 import weo
 
@@ -108,7 +107,7 @@ def load_and_integrate_data(stored=True):
 
 
 def load_groups_data():
-    keys = {
+    vars = {
         "iso_code": "Code",
         "country": "Entity",
         "group_OWID_Continent": "OWID_Continent",
@@ -122,25 +121,26 @@ def load_groups_data():
         "group_WB_latitude": "WB_latitude"
     }
 
-    keys_group = [
+    vars_group = [
         "group_OWID_Continent",
         "group_UN_Region",
         "group_WHO_Region",
         "group_WB_region",
         "group_WB_adminregion",
         "group_WB_incomeLevel",
-        "group_WB_lendingType"]
+        "group_WB_lendingType"
+    ]
 
     df_groups = pd.DataFrame()
 
-    for k in keys:
-        df_groups[k] = df_entities[keys[k]]
+    for k in vars:
+        df_groups[k] = df_entities[vars[k]]
 
     # add us
 
     # df_groups.set_index("iso_code")
 
-    for k in keys_group:
+    for k in vars_group:
 
         df_groups[k + "_exclude_US"] = df_groups[k]
 
