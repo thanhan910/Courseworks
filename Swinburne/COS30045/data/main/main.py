@@ -1,3 +1,4 @@
+
 import pandas as pd
 
 DIRECTORY = ""
@@ -47,7 +48,6 @@ df_countries = pd.read_csv(DIRECTORY + SOURCES["countries"]["data"]["csv"])
 # df_usstates_csv = pd.read_csv(SOURCES["usstates"]["data"]["csv"])
 # df_usstates_csv
 df_usstates = pd.read_csv(DIRECTORY + SOURCES["usstates"]["data"]["csv"])
-
 
 # selecting attributes 
 # settings
@@ -128,7 +128,7 @@ COUNTRIES_NEEDED_VARIABLES = [
     "oil_production",
 ]
 
-USSTATES_NEEDED_YEARS = range(2000, 2020)
+USSTATES_NEEDED_YEARS = range(1960, 2020)
 
 # filter datasets
 
@@ -145,14 +145,14 @@ df_usstates = df_usstates[df_usstates["Year"].isin(USSTATES_NEEDED_YEARS)]
 df_countries.to_csv("countries_data.csv", index=False)
 df_usstates.to_csv("usstates_data.csv", index=False)
 
-# download info data
+# ## download info data
 
-pd.read_json(DIRECTORY + SOURCES["countries"]["info"]["json"],orient="index").agg(lambda x: x.dropna().to_dict(), axis=1).to_json("countries_info.json")
+# pd.read_json(DIRECTORY + SOURCES["countries"]["info"]["json"],orient="index").agg(lambda x: x.dropna().to_dict(), axis=1).to_json("countries_info.json")
 
-pd.read_json(DIRECTORY + SOURCES["usstates"]["info"]["json"],orient="index").agg(lambda x: x.dropna().to_dict(), axis=1).to_json("usstates_info.json")
+# pd.read_json(DIRECTORY + SOURCES["usstates"]["info"]["json"],orient="index").agg(lambda x: x.dropna().to_dict(), axis=1).to_json("usstates_info.json")
 
-## download tile grid data
+# ## download tile grid data
 
-pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["links"]).to_csv("links.csv", index=False)
+# pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["links"]).to_csv("links.csv", index=False)
 
-pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["publication-grids"]).to_csv("publication-grids.csv", index=False)
+# pd.read_csv(DIRECTORY + SOURCES["tilegrid"]["publication-grids"]).to_csv("publication-grids.csv", index=False)
