@@ -128,7 +128,7 @@ COUNTRIES_NEEDED_VARIABLES = [
     "oil_production",
 ]
 
-USSTATES_NEEDED_YEARS = range(2000, 2019)
+USSTATES_NEEDED_YEARS = range(2000, 2020)
 
 # filter datasets
 
