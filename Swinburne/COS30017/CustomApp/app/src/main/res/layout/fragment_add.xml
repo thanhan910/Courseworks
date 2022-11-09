@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.example.taskapp.ui.add.AddViewModel"/>
+        <variable
+            name="viewModel"
+            type="com.example.taskapp.ui.add.AddViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:orientation="vertical"
+        android:windowIsFloating="false"
+        android:windowSoftInputMode="adjustResize"
+        tools:context=".ui.add.AddFragment" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/checkIcon"
+                android:layout_width="30dp"
+
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/check"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_radio_image" />
+
+            <EditText
+                android:id="@+id/nameView"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+
+                android:background="@null"
+                android:hint="@string/name"
+
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+
+                android:textColor="@color/main"
+
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/star_icon"
+                app:layout_constraintStart_toEndOf="@+id/checkIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ImageView
+                android:id="@+id/star_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+
+                android:contentDescription="@string/star"
+                app:srcCompat="@drawable/ic_star_0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/DateButtonBottomFragment"
+                    android:id="@+id/dueButton"
+                    android:text="@string/set_due_date"
+                    app:icon="@drawable/ic_due" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/estimateButton"
+                    android:text="@string/estimate"
+                    app:icon="@drawable/ic_estimate"
+                    style="@style/DateButtonBottomFragment"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dueButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/planButton"
+                    android:text="@string/plan_task"
+                    app:icon="@drawable/ic_plan"
+                    style="@style/DateButtonBottomFragment"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/estimateButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/remindButton"
+                    android:text="@string/remind_me"
+                    app:icon="@drawable/ic_remind"
+                    style="@style/DateButtonBottomFragment"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/planButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView">
+
+            <TextView
+                android:id="@+id/descriptionView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/add_description"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:textColorHint="#757575"
+                android:textColor="@color/main"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:contentDescription="@string/add"
+
+                android:text="@string/add"
+                app:icon="@drawable/ic_add_circle"
+
+
+                app:backgroundTint="@color/backgroundOff"
+                app:iconTint="@color/white"
+                android:textColor="@color/white"
+
+                app:drawableStartCompat="@drawable/ic_add_circle"
+
+                android:gravity="center"
+
+                app:iconSize="18dp"
+                app:iconGravity="textStart"
+                android:textAllCaps="false"
+
+                android:textAlignment="gravity"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

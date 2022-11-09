@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="isLightTheme">false</item>
+    </style>
+
+    <style name="DateButtonBottomFragment">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="iconGravity">start</item>
+        <item name="backgroundTint">@color/backgroundOff2</item>
+        <item name="iconTint">@color/textOff2</item>
+        <item name="android:textColor">@color/textOff2</item>
+    </style>
+
+    <style name="DateButtonEditFragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="iconGravity">start</item>
+        <item name="backgroundTint">@color/backgroundOff2</item>
+        <item name="iconTint">@color/textOff2</item>
+        <item name="android:textColor">@color/textOff2</item>
+    </style>
+</resources>

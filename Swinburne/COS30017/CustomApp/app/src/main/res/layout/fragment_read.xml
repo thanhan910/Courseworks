@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:orientation="vertical"
+    android:windowIsFloating="false"
+    android:windowSoftInputMode="adjustResize"
+    tools:context=".ui.read.ReadFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/checkIcon"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/check"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_radio_button_unchecked" />
+
+        <TextView
+            android:id="@+id/nameView"
+
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+
+            android:hint="@string/name"
+
+
+            android:textColor="@color/main"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/star_icon"
+            app:layout_constraintStart_toEndOf="@+id/checkIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/star_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/star"
+            app:srcCompat="@drawable/ic_star_0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dueButton"
+        style="@style/DateButtonEditFragment"
+        android:text="@string/set_due_date"
+        app:icon="@drawable/ic_due"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/estimateButton"
+        style="@style/DateButtonEditFragment"
+        android:text="@string/estimate_this_task"
+        app:icon="@drawable/ic_estimate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dueButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/planButton"
+        style="@style/DateButtonEditFragment"
+        android:text="@string/plan_this_task"
+        app:icon="@drawable/ic_plan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/estimateButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/remindButton"
+        style="@style/DateButtonEditFragment"
+        android:text="@string/add_reminders"
+        app:icon="@drawable/ic_remind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planButton" />
+
+    <TextView
+        android:id="@+id/descriptionView"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:hint="@string/add_description"
+        android:padding="8dp"
+        android:textColorHint="#757575"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remindButton" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionView">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+
+            android:contentDescription="@string/save"
+
+            android:text="@string/delete"
+            app:icon="@drawable/ic_baseline_delete_forever_24"
+
+
+            app:backgroundTint="@color/red"
+            app:iconTint="@color/white"
+            android:textColor="@color/white"
+
+            app:drawableStartCompat="@drawable/ic_add_circle"
+
+            android:gravity="center"
+
+            app:iconSize="18dp"
+            app:iconGravity="textStart"
+            android:textAllCaps="false"
+
+            android:textAlignment="gravity"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

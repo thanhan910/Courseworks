@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/sort_by"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_arrow_up_arrow_down">
+        <menu>
+            <group>
+                <item
+                    android:title="@string/due_date"
+                    app:showAsAction="never" >
+                    <menu>
+                        <item
+                            android:id="@+id/action_sort_due_asc"
+                            android:title="@string/nearest"
+                            app:showAsAction="never" />
+                        <item
+                            android:id="@+id/action_sort_due_desc"
+                            android:title="@string/furthest"
+                            app:showAsAction="never" />
+                    </menu>
+                </item>
+                <item
+                    android:title="@string/est_duration"
+                    app:showAsAction="never" >
+                    <menu>
+                        <item
+                            android:id="@+id/action_sort_estimate_asc"
+                            android:title="@string/shortest"
+                            app:showAsAction="never" />
+                        <item
+                            android:id="@+id/action_sort_estimate_desc"
+                            android:title="@string/longest"
+                            app:showAsAction="never" />
+                    </menu>
+                </item>
+                <item
+                    android:title="@string/planned"
+                    app:showAsAction="never" >
+                    <menu>
+                        <item
+                            android:id="@+id/action_sort_plan_asc"
+                            android:title="@string/nearest"
+                            app:showAsAction="never" />
+                        <item
+                            android:id="@+id/action_sort_plan_desc"
+                            android:title="@string/furthest"
+                            app:showAsAction="never" />
+                    </menu>
+                </item>
+                <item
+                    android:title="@string/created_time"
+                    app:showAsAction="never" >
+                    <menu>
+                        <item
+                            android:id="@+id/action_sort_created_time_asc"
+                            android:title="@string/oldest_to_newest"
+                            app:showAsAction="never" />
+                        <item
+                            android:id="@+id/action_sort_created_time_desc"
+                            android:title="@string/newest_to_oldest"
+                            app:showAsAction="never" />
+                    </menu>
+                </item>
+                <item
+                    android:title="@string/modified_time"
+                    app:showAsAction="never" >
+                    <menu>
+                        <item
+                            android:id="@+id/action_sort_modified_time_asc"
+                            android:title="@string/oldest_to_newest"
+                            app:showAsAction="never" />
+                        <item
+                            android:id="@+id/action_sort_modified_time_desc"
+                            android:title="@string/newest_to_oldest"
+                            app:showAsAction="never" />
+                    </menu>
+                </item>
+                <item
+                    android:title="@string/checked_time"
+                    app:showAsAction="never" >
+                    <menu>
+                        <item
+                            android:id="@+id/action_sort_checked_time_asc"
+                            android:title="@string/oldest_to_newest"
+                            app:showAsAction="never" />
+                        <item
+                            android:id="@+id/action_sort_checked_time_desc"
+                            android:title="@string/newest_to_oldest"
+                            app:showAsAction="never" />
+                    </menu>
+                </item>
+                <item
+                    android:id="@+id/action_clear_order"
+                    android:title="@string/clear_sorting_rules"
+                    app:showAsAction="never" >
+                </item>
+            </group>
+<!--            <group android:checkableBehavior="all">-->
+<!--                <item-->
+<!--                    android:id="@+id/action_hide_completed"-->
+<!--                    android:title="@string/hide_completed"-->
+<!--                    app:showAsAction="never" />-->
+<!--                <item-->
+<!--                    android:id="@+id/action_hide_wont_do"-->
+<!--                    android:title="@string/hide_wont_do"-->
+<!--                    app:showAsAction="never" />-->
+<!--            </group>-->
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_all"
+            android:icon="@drawable/ic_menu_all"
+            android:title="@string/menu_all_tasks" />
+        <item
+            android:id="@+id/nav_starred"
+            android:icon="@drawable/ic_menu_starred"
+            android:title="@string/menu_starred" />
+        <item
+            android:id="@+id/nav_upcoming"
+            android:icon="@drawable/ic_due"
+            android:title="@string/menu_upcoming" />
+        <item
+            android:id="@+id/nav_planned"
+            android:icon="@drawable/ic_plan"
+            android:visible="true"
+            android:title="@string/menu_planned" />
+    </group>
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_tasks"
+             />
+        <item
+            android:id="@+id/nav_completed"
+            android:icon="@drawable/ic_menu_completed"
+            android:title="@string/menu_completed" />
+        <item
+            android:id="@+id/nav_wont_do"
+            android:icon="@drawable/ic_menu_wont_do"
+            android:title="@string/menu_wont_do" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/groupList">
+    </group>
+
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main">#FFFFFF</color>
+    <color name="bottomSheet">@color/cardview_dark_background</color>
+    <color name="grey">#CCCCCC</color>
+    <color name="backgroundOn">#FFBB86FC</color>
+    <color name="textOn">#000000</color>
+    <color name="backgroundOff">#555555</color>
+    <color name="textOff">#000000</color>
+    <color name="backgroundOn2">#00000000</color>
+    <color name="textOn2">#FFFFFF</color>
+    <color name="backgroundOff2">#00000000</color>
+    <color name="textOff2">#AAAAAA</color>
+</resources>
