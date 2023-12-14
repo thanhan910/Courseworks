@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Assignment 2: Laptop and Computer Purchase Website - Payment" />
+	<meta name="keywords" content="Assignment 2, Laptop, Computer, Purchase, Payment, HTML, CSS, Javascript" />
+	<meta name="author" content="Thanh An Nguyen" />
+	<title>Payment</title>
+	<link rel="stylesheet" href="styles/style.css" />
+	<script src="scripts/payment.js"></script>
+</head>
+<body>
+	<!-- The entire header will link to the Home page -->
+	<a href="index.html">
+		<!-- The id of the header is "" (none) so that the back to top button will link to the header and the webpage link will not change too much (only a # will appear at the webpage link) -->
+		<header class="top" id="hdr">
+			<img src="images/logoimg.jpg" alt="Logo" id="logoimg" height="70" width="80">		
+			<!--Source: https://media.istockphoto.com/photos/laptop-with-blank-screen-isolated-on-black-background-picture-id1183047088?k=6&m=1183047088&s=612x612&w=0&h=1U0FFG0iIZSWjyF8nTBD0y62Dtk824CjixsLebouF3g=
+				Reference: https://www.istockphoto.com/photos/laptop-black-background -->
+			<h1>EZWeb - Laptop computer purchase website</h1>
+		</header>
+	</a>
+
+	<!-- Top Navigation Menu -->
+	<nav class="top">
+		<!-- This will let the user know which page the user is in (index.html) 
+		The markup will be done in the CSS file  -->
+		<a href="index.html">Home</a> 
+		<a href="product.html">Product</a> 
+		<a href="enquire.html">Enquiry</a> 
+		<a href="about.html">About</a>
+		<a href="enhancements2.html">Enhancements2</a>
+		<a href="payment.html" id="inthispage">Payment</a>
+		<!-- This is the search bar form. Since there are no JavaScript, this will link to my lab.html page -->
+  	<form action="lab.html">
+  		<!-- Search input -->
+    	<input type="text" placeholder="Type here to search..." name="q" size="36">
+    	<!-- Search button -->
+    	<button type="submit" value="Search">Search</button>
+  	</form>
+	</nav>
+
+	<h1 class="content-header">Payment</h1>
+	<hr />
+
+	<h3 class="content-header">Please check your information and fill in your payment details:</h3>
+	<hr />
+
+	<!-- Product enquiry form. Linked to the PHP page -->
+	<!-- https://mercury.swin.edu.au/it000000/formtest.php -->
+	<form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" id="payment-form">
+		<!-- All inputs to be submitted to php -->
+		<input type="hidden" id="first-name" name="first-name" />
+		<input type="hidden" id="last-name" name="last-name" />
+		<input type="hidden" id="email-address" name="email-address" />
+		<input type="hidden" id="street-address" name="street-address" />
+		<input type="hidden" id="suburb-town" name="suburb-town" />
+		<input type="hidden" id="state" name="state" />
+		<input type="hidden" id="postcode" name="postcode" />
+		<input type="hidden" id="phone-number" name="phone-number" />
+		<input type="hidden" id="preferred-contact" name="preferred-contact" />
+		<input type="hidden" id="choose-product" name="choose-product" />
+		<input type="hidden" id="memory" name="memory" />
+		<input type="hidden" id="storage" name="storage" />
+		<input type="hidden" id="storage-device" name="storage-device" />
+		<input type="hidden" id="OS" name="OS" />
+		<input type="hidden" id="write-more" name="write-more" />
+		<input type="hidden" id="cost-per-laptop" name="cost-per-laptop"/>
+		<input type="hidden" id="quantity" name="quantity" />
+		<input type="hidden" id="total-price" name="total-price"/>
+		<!-- User information -->
+		<fieldset>
+			<legend>Your information</legend>
+			<!-- First name -->
+			<p>First name: <span id="payment-first-name"></span></p> 
+			<!-- Last name -->
+			<p>Last name: <span id="payment-last-name"></span></p> 
+			<!-- Email address -->
+			<p>Email address: <span id="payment-email-address"></span></p>
+			<!-- Postal Address -->
+			<fieldset>
+				<legend>Postal Address</legend>
+				<!-- Address fieldset -->
+				<p>Street Address: <span id="payment-street-address"></span></p> 
+				<!-- Address fieldset -->
+				<p>Suburb/Town: <span id="payment-suburb-town"></span></p> 
+				<!-- Address fieldset -->
+				<p>State: <span id="payment-state"></span></p> 
+				<!-- Address fieldset -->
+				<p>Postcode: <span id="payment-postcode"></span></p> 
+			</fieldset>
+			<!-- Phone number. Include placeholder (Most inputs include placeholders) -->
+			<p>Phone number: <span id="payment-phone-number"></span></p> 
+			<!-- Preferred contact -->
+			<p>Preferred contact: <span id="payment-preferred-contact"></span></p> 
+		</fieldset>
+		<!-- Laptop information -->
+		<fieldset>
+			<legend>Laptop details</legend>
+			<figure id="payment-product-figure">
+				<!-- The product image -->
+				<img src="images/applelaptop.jpg" alt="Product picture" width="260" height="163" id="payment-product-img">
+				<figcaption id="payment-product-figcaption"> </figcaption>
+			</figure>
+			<!-- Choose the laptop the user wants to enquire -->
+			<p>Laptop: <span id="payment-choose-product"></span></p>
+			<!-- Number of products -->
+			<p>Number of laptops: <span id="payment-quantity">0</span></p>
+			<!-- Added features -->
+			<fieldset>
+				<!-- If the user didn't choose anything, there will be a "none" displayed -->
+				<legend>Added features for each laptop: </legend>
+				<!-- memory -->
+				<p>Memory: <span id="payment-memory">none</span></p> 
+				<!-- storage -->
+				<p>Storage: <span id="payment-storage">none</span></p> 
+				<!-- storage device -->
+				<p>Storage device: <span id="payment-storage-device">none</span></p> 
+				<!-- operating system -->
+				<p>Operating System: <span id="payment-OS">none</span></p> 
+			</fieldset>
+			<!-- more information -->
+			<fieldset>
+				<legend>More information</legend>
+				<!-- If the user didn't write anything, there will be a "none" displayed -->
+				<span id="payment-write-more">none</span>
+			</fieldset>
+		</fieldset>
+		<!-- credit card -->
+		<fieldset>
+			<legend>Payment details</legend>
+			<!-- Cost per Laptop -->
+			<p>Cost per laptop: $<span id="payment-cost-per-laptop">0</span></p>
+			<!-- Number of products -->
+			<p>Number of laptops: <span id="payment-quantity-2">0</span></p>
+			<!-- Total Price -->
+			<p>Total Price: $<span id="payment-total-price">0</span></p> 
+			<!-- Credit card type -->
+			<label>Credit card type:</label>
+			<select name="credit-card-type" id="credit-card-type" required="required">
+				<option value="">Please select</option>		
+				<option value="Visa">Visa</option>	
+				<option value="Mastercard">Mastercard</option>
+				<option value="American Express">American Express</option>
+			</select>
+			<!-- name on credit card -->
+			<label for="credit-card-name">Name on credit card:</label>
+			<input name="credit-card-name" type="text" id="credit-card-name" placeholder="Maximum 40 characters" maxlength="40" size="40" required="required"/>
+			<!-- credit card number -->
+			<!-- exactly 15 or 16 digits. 
+			Credit card numbers must be checked against the selected card type 
+			according to the following rules:
+			Visa cards have 16 digits and start with a 4
+			MasterCard have 16 digits and start with digits 51 through to 55
+			American Express has 15 digits and starts with 34 or 37. -->
+			<label for="credit-card-number">Credit card number:</label>
+			<input name="credit-card-number" type="text" id="credit-card-number" maxlength="16" size="25" required="required" placeholder="15-16 digits"/>
+			<!-- credit card expiry date -->
+			<label for="credit-card-expiry-date">Credit card expiry date:</label>
+			<input name="credit-card-expiry-date" type="text" id="credit-card-expiry-date" placeholder="mm-yy" required="required" size="25" maxlength="5"/>
+			<!-- card verification value -->
+			<label for="credit-card-verification-value">Card verification value:</label>
+			<input name="credit-card-verification-value" type="text" id="credit-card-verification-value" placeholder="CVV" size="25"/>
+		</fieldset>
+		<!-- the buttons -->
+		<div id="payment-buttons">
+			<input type= "submit" id="payment-submit" value="Check Out"/>
+			<input type= "reset" value="Reset"/>
+			<button type="button" id="payment-cancelButton">Cancel Order</button>
+		</div>
+		
+	</form>
+	
+  <!-- The footer -->
+	<footer>
+		<hr />
+		<!-- Author (my) information -->
+		<p>Create by: Thanh An Nguyen. ID: 103125896.</p>
+		<!-- Author email -->
+		<p>Email: <a href="mailto:103125896@student.swin.edu.au" class="email">103125896@student.swin.edu.au</a></p>
+		<!-- Disclaimer. Reference: -->
+		<p>All names, characters, and events portrayed in this webpage are fictional.<br /> 
+		Any similarity with other creative or real events or characters are purely coincidental.</p>
+		<!-- The back to top button -->
+		<a href="#hdr" id="backtotop">Back to top</a>
+	</footer>
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Assignment 2: Laptop and Computer Purchase Website - Lab" />
+	<meta name="keywords" content="Assignment 2, Laptop, Computer, Purchase, Lab, HTML, CSS, Javascript" />
+	<meta name="author" content="Thanh An Nguyen" />
+	<title>Lab</title>
+	<link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+	<!-- The entire header will link to the Home page -->
+	<a href="index.html">
+		<!-- The id of the header is "" (none) so that the back to top button will link to the header and the webpage link will not change too much (only a # will appear at the webpage link) -->
+		<header class="top" id="hdr">
+			<img src="images/logoimg.jpg" alt="Logo" id="logoimg" height="70" width="80">		
+			<!--Source: https://media.istockphoto.com/photos/laptop-with-blank-screen-isolated-on-black-background-picture-id1183047088?k=6&m=1183047088&s=612x612&w=0&h=1U0FFG0iIZSWjyF8nTBD0y62Dtk824CjixsLebouF3g=
+				Reference: https://www.istockphoto.com/photos/laptop-black-background -->
+			<h1>EZWeb - Laptop computer purchase website</h1>
+		</header>
+	</a>
+
+	<!-- Top Navigation Menu -->
+	<nav class="top">
+		<!-- This will let the user know which page the user is in (index.html) 
+		The markup will be done in the CSS file  -->
+		<a href="index.html">Home</a> 
+		<a href="product.html">Product</a> 
+		<a href="enquire.html">Enquiry</a> 
+		<a href="about.html">About</a>
+		<a href="enhancements2.html">Enhancements2</a>
+		<!-- This is the search bar form. Since there are no JavaScript, this will link to my lab.html page -->
+	    <form action="lab.html">
+	    	<!-- Search input -->
+		    <input type="text" placeholder="Type here to search..." name="q" size="36">
+		    <!-- Search button -->
+		    <button type="submit" value="Search">Search</button>
+	    </form>
+	</nav>
+
+	<h1 class="content-header">Hi! This is a lab page where I experiment some new features for my webpages</h1>
+	<hr />
+
+  <!-- The footer -->
+	<footer>
+		<hr />
+		<!-- Author (my) information -->
+		<p>Create by: Thanh An Nguyen. ID: 103125896.</p>
+		<!-- Author email -->
+		<p>Email: <a href="mailto:103125896@student.swin.edu.au" class="email">103125896@student.swin.edu.au</a></p>
+		<!-- Disclaimer. Reference: -->
+		<p>All names, characters, and events portrayed in this webpage are fictional.<br /> 
+		Any similarity with other creative or real events or characters are purely coincidental.</p>
+		<!-- The back to top button -->
+		<a href="#hdr" id="backtotop">Back to top</a>
+	</footer>
+</body>

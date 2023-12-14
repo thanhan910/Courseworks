@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Assignment 2: Laptop and Computer Purchase Website - Enquire" />
+	<meta name="keywords" content="Assignment 2, Laptop, Computer, Purchase, Enquire, HTML, CSS, Javascript" />
+	<meta name="author" content="Thanh An Nguyen" />
+	<title>Enquiry and Selection</title>
+	<link rel="stylesheet" href="styles/style.css" />
+	<script src="scripts/part2.js"></script>
+</head>
+<body>
+	<!-- The entire header will link to the Home page -->
+	<a href="index.html">
+		<!-- The id of the header is "" (none) so that the back to top button will link to the header and the webpage link will not change too much (only a # will appear at the webpage link) -->
+		<header class="top" id="hdr">
+			<img src="images/logoimg.jpg" alt="Logo" id="logoimg" height="70" width="80">		
+			<!--Source: https://media.istockphoto.com/photos/laptop-with-blank-screen-isolated-on-black-background-picture-id1183047088?k=6&m=1183047088&s=612x612&w=0&h=1U0FFG0iIZSWjyF8nTBD0y62Dtk824CjixsLebouF3g=
+				Reference: https://www.istockphoto.com/photos/laptop-black-background -->
+			<h1>EZWeb - Laptop computer purchase website</h1>
+		</header>
+	</a>
+
+	<!-- Top Navigation Menu -->
+	<nav class="top">
+		<!-- This will let the user know which page the user is in (index.html) 
+		The markup will be done in the CSS file  -->
+		<a href="index.html">Home</a> 
+		<a href="product.html">Product</a> 
+		<a href="enquire.html" id="inthispage">Enquiry</a> 
+		<a href="about.html">About</a>
+		<a href="enhancements2.html">Enhancements2</a>
+		<!-- This is the search bar form. Since there are no JavaScript, this will link to my lab.html page -->
+    	<form action="lab.html">
+    		<!-- Search input -->
+	    	<input type="text" placeholder="Type here to search..." name="q" size="36">
+	    	<!-- Search button -->
+	    	<button type="submit" value="Search">Search</button>
+    	</form>
+	</nav>
+
+	<h1 class="content-header">Laptop computer enquiry and selection form</h1>
+	<hr />
+
+	<h2 id="enquiry-form-header">Please fill in the form below:</h2>
+	<hr />
+
+	<!-- Product enquiry form. Linked to the PHP page -->
+	<!-- https://mercury.swin.edu.au/it000000/formtest.php -->
+	<form method="post" action="payment.html" id="product-enquiry">
+		<!-- First name -->
+		<label for="first-name">First name</label> 
+		<!-- pattern="[A-Za-z]{0,25}" I left this out so that the Error Message can be displayed-->
+		<input type="text" name= "first-name" id="first-name" required="required" maxlength="25" size="25" placeholder="Maximum 25 letters" />
+		<!-- Last name -->
+		<label for="last-name">Last name</label> 
+		<!-- pattern="[a-zA-Z\-]{0,25}" I left this out so that the Error Message can be displayed-->
+		<input type="text" name= "last-name"  id="last-name"  required="required" maxlength="25" size="25" placeholder="Maximum 25 letters"/>
+		<!-- Email address -->
+		<label for="email-address">Email address</label>
+		<input type="email" name= "email-address"  id="email-address" required="required" size="25" placeholder="example@email.domain" />
+		<!-- Address fieldset -->
+		<fieldset>
+			<legend>Postal Address</legend>
+			<label for="street-address">Street Address</label> 
+			<input type="text" name= "street-address" id="street-address" maxlength="40" size="40" required="required" placeholder="Maximum 40 letters" />
+			<label for="suburb-town">Suburb/town</label> 
+			<input type="text" name= "suburb-town" id="suburb-town" maxlength="20" size="20" required="required" placeholder="Maximum 20 letters" />
+			<label for="state">State</label> 
+			<!--VIC,NSW,QLD,NT,WA,SA,TAS,ACT-->
+			<select name="state" id="state" required="required">
+				<option value="">Please select</option>		
+				<option value="VIC">VIC</option>	
+				<option value="NSW">NSW</option>
+				<option value="QLD">QLD</option>
+				<option value="NT">NT</option>
+				<option value="WA">WA</option>
+				<option value="SA">SA</option>
+				<option value="TAS">TAS</option>
+				<option value="ACT">ACT</option>
+			</select>
+			<label for="postcode">Postcode</label> 
+			<!-- pattern="[0-9]{4}" I left this out so that the Error Message can be displayed-->
+			<input type="text" name= "postcode"  id="postcode"  maxlength="4" size="4" required="required" placeholder="1234" />
+		</fieldset>
+		<!-- Phone number. Include placeholder (Most inputs include placeholders) -->
+		<label for="phone-number">Phone number</label> 
+		<!-- pattern="[0-9]{10}" I left this out so that the Error Message can be displayed-->
+		<input type="text" name= "phone-number"  id="phone-number"   maxlength="10" size="10" required="required" placeholder="0123456789" />
+		<!-- Preferred contact -->
+		<fieldset id="preferred-contact">
+			<legend>Preferred contact: </legend>
+			<!-- I need to use span so that the label and input will stick together -->
+			<div class="tick-box">
+				<label for="preferemail" class="tick-box">Email</label> 
+				<input type="radio" id="preferemail" class="tick-box" name="preferred-contact" required="required" value="Email" checked="checked"/>
+			</div>
+			<div class="tick-box">
+				<label for="preferpost" class="tick-box">Post</label> 
+				<input type="radio" id="preferpost" class="tick-box" name="preferred-contact" required="required" value="Post"/>
+			</div>
+			<div class="tick-box">
+				<label for="preferphone" class="tick-box">Phone</label>
+				<input type="radio" id="preferphone" class="tick-box" name="preferred-contact" required="required" value="Phone"/>
+			</div>
+		</fieldset>		
+		<figure id="enquire-product-figure">
+			<!-- The product image -->
+			<img src="images/applelaptop.jpg" alt="Product picture" width="260" height="163" id="enquire-product-img">
+			<figcaption id="enquire-product-figcaption"> </figcaption>
+		</figure>
+		<!-- Choose the laptop the user wants to enquire -->
+		<label for="choose-product">Choose your laptop product: </label>
+		<select name="product" id="choose-product" required="required">
+			<option value="">Choose product</option>	
+			<option value="Apple Surface Pro X ($1,000)">Apple Surface Pro X ($1,000)</option>		
+			<option value="IBM ThinkPad IQ 900 ($500)">IBM ThinkPad IQ 900 ($500)</option>
+			<option value="Microsoft Macbook Air 20 ($800)">Microsoft Macbook Air 20 ($800)</option>
+		</select>
+		<!-- Choose number of products -->
+		<label for="quantity">Number of laptops:</label> 
+		<!-- pattern="[0-9]{1,}" I left this out so that the Error Message can be displayed-->
+		<input type="text" name= "quantity"  id="quantity" size="4" placeholder="1,2,..." required="required"/>
+		<!-- Choose the features -->
+		<fieldset>
+			<legend>Choose your laptop features: (optional)</legend>
+			<!-- memory -->
+			<fieldset id="memory">
+				<legend>Memory</legend>
+				<!-- I need to use div so that the label and input will stick together on a line -->
+				<div class="tick-box">
+					<label for="RAM8GB">8GB (+$10/laptop)</label>
+					<input type="checkbox" id="RAM8GB" name="memory" value="8GB (+$10)" checked="checked"/>
+				</div>
+				<div class="tick-box">
+					<label for="RAM16GB">16GB (+$20/laptop)</label>
+					<input type="checkbox" id="RAM16GB" name="memory" value="16GB (+$20)"/>
+				</div>
+				<div class="tick-box">
+					<label for="RAM32GB">32GB (+$30/laptop)</label>
+					<input type="checkbox" id="RAM32GB" name="memory" value="32GB (+$30)"/>
+				</div>
+			</fieldset>
+			<!-- storage -->
+			<fieldset id="storage">
+				<legend>Storage</legend>
+				<div class="tick-box">
+					<label for="Storage128GB">128GB (+$100/laptop)</label>
+					<input type="checkbox" id="Storage128GB" name="storage" value="128GB (+$100)" checked="checked"/>
+				</div>
+				<div class="tick-box">
+					<label for="Storage256GB">256GB (+$150/laptop)</label>
+					<input type="checkbox" id="Storage256GB" name="storage" value="256GB (+$150)"/>
+				</div>
+				<div class="tick-box">
+					<label for="Storage512GB">512GB (+$200/laptop)</label>
+					<input type="checkbox" id="Storage512GB" name="storage" value="512GB (+$200)"/>
+				</div>
+				<div class="tick-box">
+					<label for="Storage1TB">1TB (+$250/laptop)</label>
+					<input type="checkbox" id="Storage1TB" name="storage" value="1TB (+$250)"/>
+				</div>
+			</fieldset>
+			<!-- storage device -->
+			<fieldset id="storage-device">
+				<legend>Storage Device</legend>
+				<div class="tick-box">
+					<label for="StorageHDD">HDD (+$50/laptop)</label>
+					<input type="checkbox" id="StorageHDD" name="storage-device" value="HDD (+$50)" checked="checked"/>
+				</div>
+				<div class="tick-box">
+					<label for="StorageSSD">SSD (+$100/laptop)</label>
+					<input type="checkbox" id="StorageSSD" name="storage-device" value="SSD (+$100)"/>
+				</div>
+			</fieldset>
+			<!-- operating system -->
+			<fieldset id="OS">
+				<legend>Operating System</legend>
+				<div class="tick-box">
+					<label for="OSLinux">Linux (free)</label>
+					<input type="checkbox" id="OSLinux" name="OS" value="Linux (free)" checked="checked"/>
+				</div>
+				<div class="tick-box">
+					<label for="OSWindows">Windows (+$10/laptop)</label>
+					<input type="checkbox" id="OSWindows" name="OS" value="Windows (+$10)" />
+				</div>
+				<div class="tick-box">
+					<label for="OSmacOS">macOS (+$20/laptop)</label>
+					<input type="checkbox" id="OSmacOS" name="OS" value="macOS (+$20)"/>
+				</div>
+				<div class="tick-box">
+					<label for="OSChromeOS">ChromeOS (+$5/laptop)</label>
+					<input type="checkbox" id="OSChromeOS" name="OS" value="ChromeOS (+$5)"/>
+				</div>
+			</fieldset>
+		</fieldset>
+		<!-- textarea -->
+		<div id="enquire-textarea">
+			<label for="write-more">More information: (optional)</label>
+			<textarea id="write-more" name="write-more" placeholder="What else would you like to know about your product?" rows="5"></textarea>
+		</div>
+		<!-- the buttons -->
+		<div id="enquire-buttons">
+			<input type= "submit" value="Pay now"/>
+			<input type= "reset" value="Reset"/>
+		</div>
+	</form>
+	
+  <!-- The footer -->
+	<footer>
+		<hr />
+		<!-- Author (my) information -->
+		<p>Create by: Thanh An Nguyen. ID: 103125896.</p>
+		<!-- Author email -->
+		<p>Email: <a href="mailto:103125896@student.swin.edu.au" class="email">103125896@student.swin.edu.au</a></p>
+		<!-- Disclaimer. Reference: -->
+		<p>All names, characters, and events portrayed in this webpage are fictional.<br /> 
+		Any similarity with other creative or real events or characters are purely coincidental.</p>
+		<!-- The back to top button -->
+		<a href="#hdr" id="backtotop">Back to top</a>
+	</footer>
+</body>

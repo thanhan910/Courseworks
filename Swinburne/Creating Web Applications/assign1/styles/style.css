@@ -1,0 +1,1204 @@
+/*
+filename: index.html, product.html, enquire.html, about.html, enhancements.html, lab.html
+author: Thanh An Nguyen
+created: March 21st, 2021
+last modified: March 29th, 2021
+description: Assignment 1 - Laptop Computer purchase
+*/
+
+/* Initialize */
+
+* {
+	/* The webpages' font-family is Segoe UI, except the header */
+  font-family: "Segoe UI", "Roboto", "Arial", "sans-serif"; 
+  /* Make every block margin:0 to be more convenient when adding new blocks to adjust the layout */ 
+  margin: 0;
+}
+
+/* The links in the webpages are usually internal links */
+/* So I set text-decoration:none; and color:black; to make the link look more elegant */
+a {
+	text-decoration:none;
+	color: black;
+}
+
+/* Some still required to be visible to users, so I set the text-decoration:underline; 
+to email classes */
+a.email {
+	text-decoration:underline;
+	color: black;
+}
+
+/* Make the hr evenly spaced between left and right, so that user won't confuse between hr and borders */
+hr {
+	margin: 0px 20px;
+	clear:both;
+}
+
+/* The header and nav have class "top", as in the "top" menu */
+/* The top menu elements have class="top" */
+.top {
+	/* background same as nav.
+  /* I actually tried to used var(), but the lecture pdf states that I'm not allowed to use it? */
+  /* I think this is not in the assignment requirements nor the lectures*/
+  background: #16161d; /* Random dark color. Reference: https://www.colourlovers.com/color/16161D/Eigengrau; */
+}
+
+
+/* The header is a link to the Home page */
+/* Styling the top header block */
+/* This will the the webpage's logo, with a link to the home page */
+header.top {
+	/* flexible box so that content in the header can be centered */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  /* this helps the header block to have a full screen width */
+  width: 100%; 
+  clear:both;
+}
+
+
+header.top #logoimg {
+	/* At first I thought that all styles must be in the CSS file, 
+	but then the instructions state that the width and height must be in the img tag, 
+	so I kinda put width and height attributes in the img tag
+	It helps the page loads faster anyway */
+  /* width: 80px; 
+  height: 70px; */
+  margin: 15px 0px;
+  /* No padding to make the img "stick" with the h1 on the left */
+  padding: 0;
+  /* vertical align it middle to make it nice */
+  vertical-align:middle;
+}
+
+/* h1 header text content */
+header.top h1 {
+	/* display the h1 header as inline-block to fit the logo image */
+  display:inline-block;
+  /* Set the verticl align to be in the middle */
+  vertical-align: middle;
+  /* no padding to "stick" the h1 with the logo */
+  padding: 0;
+  /* centered h1 text */
+  text-align:center;
+  /* text color white to distinguish with the background color */
+  color: white;
+  /* Courier New looks cool */
+  font-family: "Courier New", "sans-serif";
+  /* Size the font size of the h1 header */
+  font-size: 2.5em;
+  /* normalize the font-weight to make it look simple and nice */
+  font-weight: normal;
+}
+
+/* Top main navigation bar menu block */
+nav.top {
+	/* block display */
+  display: block;
+  /* full width, clear both sides */
+  width:100%; 
+  clear:both;
+  /* No padding to make the menu items cover the full height.
+  The items will be styled later */
+  padding: 0;
+
+  overflow: hidden;
+
+  /* Set the navbar to fixed position while scrolling */
+  position: sticky; 
+  top: 0;
+  /* The z-index is high enough so that no element will overlay on the top menu */
+  z-index:1000;
+
+  /* background color same as header */
+  background-color: #16161d;
+  /* font size: 16px, or 1em */
+  font-size: 1em;
+}
+
+/* Navigation bar items with rectangular shapes */
+/* Learned from the w3schools style */
+/* References: 
+https://www.w3schools.com/css/css_website_layout.asp */
+nav.top a {
+  display: block;
+  /* float to the left, in oppose to the search bar on the right */
+  float: left;
+
+  /* full height */
+  height: 100%;
+  /* white color to distinguish from the background */
+  color: white;
+  /* centered text */
+  text-align: center;
+  /* 12px top bottom, 20px on the side */
+  padding: 12px 20px;
+  /* no text decoration of course */
+  /* text-decoration: none; */
+  /* (this has actually been style above at the * part) */
+}
+
+/* Styling the being hovered item box in the top menu */
+nav.top a:hover {
+	/* A little bit dark-light grey */
+  background-color: #ccc;
+  /* black color to distinguish */
+  color: black;
+}
+
+/* Styling the item box in the menu to be highlighted in its respective webpage */
+nav.top #inthispage {
+	/* A little bit light grey */
+  background-color: #ddd;
+  /* black color to distinguish */
+  color: black;
+}
+
+/* Navigation search bar - No Javascript included*/
+nav.top form {
+	/* middle aligned the search bar items */
+  vertical-align: middle;
+
+  display: block;
+  float: right;
+  /* margining the form so that it (kinda) symmetrical to the left items */ 
+  margin: 6px 10px;
+  /* full height to cover the nav height */
+  height:100%;
+}
+
+/* Search bar text box */
+nav.top form input[type=text] {
+	/* inside padding to be fit */
+  padding: 6px;
+  /*margin-top: 6px;*/
+  /* no borders since the nav background is black, and the input background is already white */
+  border: none;
+  /* this down here is to make sure that the textbox stick with the button */
+  border-radius: 0;
+  /* font-size to be identical with the menu box items links */
+  font-size: 1em;
+}
+
+/* Search button */
+nav.top form button {
+	/* the button must be next to the input textbox */
+	float: right;
+	/* fitting paddings */
+  padding: 6px 10px;
+  /*margin-top: 6px;*/
+  /* a little bit light grey */
+  background: #ddd;
+  /* grey (darker than #ddd) text . When neing hovered, it will turn black */
+  color: grey;
+  /* no borders */
+  border: none;
+  /* fitting font-size */
+  font-size: 1em;
+  /* The pointer will have a "finger pointing" shape 
+  while the user hovering the button */
+  cursor: pointer;
+  
+}
+
+/* the search button when being hovered */
+nav.top form button:hover {
+	/* darker light grey */
+  background-color:#ccc;
+  /* black text color */
+  color: black;
+}
+
+/* Responsive layout when the screen is less than 900px wide */
+@media screen and (max-width: 900px) {
+	nav.top {
+		/*no sticky*/
+		position: static; 
+	}
+
+  nav.top * { 
+  	/*make all blocks stack on top of each other instead of next to each other */  
+    display: block;
+    width: 100%;
+    clear:both;
+  }
+
+}
+
+/* footer */
+footer {
+	/* block */
+	display: block;
+	/* clear full width */
+	width:100%; 
+  clear:both;
+	margin-top: 20px;
+	/* no padding top and bottom so that it fits */
+  padding-top: 0;
+  padding-bottom: 0;
+  /* all centered */
+  text-align:center;
+}
+
+/* The hr top and bottom should be a little bit more spaced */
+footer hr {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+/* reduce the size of all paragraphs inside the footer */
+footer p {
+	font-size: 0.8em;
+}
+
+
+/* The back to top button */
+footer #backtotop {
+  display: block;
+  /* full width */
+  width:100%;
+  clear:both;
+  /* black text color */
+  color: black;
+  text-align: center;
+  /* spaced padding */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* no text decoration for the link */
+  /* text-decoration: none; */ /* this was already declared in * */
+}
+
+/* Hovered backtotop button will be light grey */
+footer #backtotop:hover {
+  background-color: #ddd;
+}
+
+
+/* Other common sections to be styled  */
+
+/* the content header of each sections */
+.content-header {
+  text-align: center;
+  margin: 20px;
+}
+
+
+/* index.html */
+
+/* Styling the body of the index.html page, in this case is just the background image */
+body#index-html {
+	/* full size background image, no repeat, position at the top, centered */
+  background: url(images/backgroundlaptop.jpg) no-repeat top center;
+  /* Source: https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-33.jpg 
+	Reference: https://www.freecreatives.com/backgrounds/background-images-for-website-design.html */
+  /* full width size background */
+  background-size: 100%;
+}
+
+/* Also the background image */
+/* I didn't know whether to use <img> as a background image 
+or use background: url() as a background image,
+because the instructions asked me to include a background graphic,
+but there is an <img> in the essential requirements
+so I did both, using the same image */
+#index-html #backgroundimageimg {
+	/* full width */
+  width: 100%;
+  /* absolute position */
+  position:absolute;
+  /* top 0 so that it won't be under the top menu and fit the body background image */  
+  top:0;
+  /* negative z-index so that it won't overlay the main elements */
+  z-index:-9999;
+}
+
+/* front block covering the body background image */ 
+#introduction {
+	/* full width block */
+  width: 100%;
+  /* top and bottom margin to be spaced */
+  margin-top: 150px;
+  margin-bottom: 440px;
+  /* The elements (welcome, search bar, click to go to) 
+  inside the block will be at the middle, 
+  similar to Google or Edge home page*/ 
+}
+
+/* styling the blocks inside the main #introduction 
+block to have a full-sceen width and be at the middle */
+/* I used <section> blocks to contain the forms and inputs */
+#introduction form, #introduction h1 {
+	/*dispaly as flexbox and outline the elements horizontally*/
+  display: flex;
+  flex-direction: row;
+  /* contents in the section blocks to be centered */
+  align-items: center;
+  justify-content: center;
+  /* full width */
+  width:100%;
+  clear: both;
+  /* top and bottom margin to be 15px, 
+  the sides should be 0px so that the blocks will have full width */
+  margin: 15px 0px;
+}
+
+/* Welcome message: h1 header; */
+#introduction h1 {
+  text-align:center;
+  font-size: 2em;
+  /* font: courier new. It looks cool */
+  font-family: "Courier New";
+}
+
+/* I want the welcome message to be more viewable on the background,
+and to have a good color contrast
+so I chosed a similar style to Google
+Reference: https://brandpalettes.com/google-colors/ */
+#introduction h1 .r, 
+#introduction h1 .g, 
+#introduction h1 .b, 
+#introduction h1 .y {
+  font-family: "Courier New", "Sans-serif";
+  font-size: 1.8em;
+}
+/* red */
+#introduction h1 .r {
+  color: #ea4455;
+}
+/* blue */
+#introduction h1 .b {
+  color: #4286f5;
+}
+/* green */
+#introduction h1 .g {
+  color: #34a955;
+}
+/* yellow */
+#introduction h1 .y {
+  color: #fbbc00;
+}
+
+#introduction-search input[type=text] {	
+	margin: 0;
+	/* large paddings so that the users can see the input clearly */
+  padding: 0.6em 1em;
+  /* no borders */
+  border: none;
+  /* border radius sync with the form's */
+  border-radius: 20px;
+  /* Shadows to make the form "glow" upon the background */
+  box-shadow: 0 8px 16px 0 rgba(100, 100, 100, 0.8);
+  /* font-size */
+	font-size: 1em;
+}
+
+#introduction-search input[type=text]:focus {
+	/* no outline when the user click on the search input bar */
+  outline: none;
+}
+
+/* Responsive layout when the screen is less than 900px wide */
+@media screen and (max-width: 900px) {
+	#introduction-search input[type=text] {
+		/*the background might be white, so add a little border*/
+		border: 2px solid grey;
+	}
+}
+
+/* The click here button */
+#introduction-clickhere button {
+	/* top margin to distance itself with the search bar above */
+	margin-top: 10px;
+	/* good padding */
+  padding: 10px 20px;
+  /* darkred Quora color
+  Reference: https://www.schemecolor.com/quora.php; */
+  background: #b92b27;
+  /* no borders, include radius */
+  border: none;
+  border-radius: 20px;
+  /*font*/
+  font-size: 16px;
+  color: white;
+  /* when the user hover on the button, a "finger pointer" will appear on the mouse pointer*/
+  cursor: pointer;
+}
+
+#introduction-clickhere button:hover {
+	/*make the button glow when hover and click */
+  box-shadow: 0px 4px 8px 0px rgba(100, 100, 100, 0.8);
+  font-weight: bold;
+}
+
+
+/* I was going to add a search button, but then I remove it */
+/* home page search bar button */
+/*
+#introduction_search form button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  float: right;
+  padding: 0.5em 1em 0.5em 0em;
+  border: none;
+  background-color:white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* home page search bar button hover */
+/*#introduction-search form button:hover {
+	font-weight: bold;
+}*/
+
+
+
+
+/* product.html */
+
+/*Adjust the width of the main part 
+so that it fits the remaining part from the aside part */
+#product-html main {
+  width: 70%;
+}
+
+/* Styling the h1 as required*/
+#product-html h1.content-header {
+	font: italic small-caps bold 2em "Courier New";
+}
+
+aside#product-aside  {
+	/* Styling the aside as required*/
+	width:25%;
+  float:right;
+  /*color the border red*/
+  border: 4px solid red;
+  /*suitable margin and padding*/
+  margin: 10px;
+  padding: 20px;
+  /* Adding some other display to make it look good */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /*The top is 55px, so if the user scroll down the page, 
+  the aside will stick at its place*/
+  position: sticky; 
+  top: 55px;
+  /*This is to make the aside overlay on other elements, except the top nav*/
+  z-index: 899; 
+
+  /*took 0.4s while and after hover*/
+  transition: 0.4s;
+}
+
+/* Adding some hover effects to make it look good */
+aside#product-aside:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*Each product has a container consists of 2 parts, a product-info block and a product-card block
+porduct-info shows the "outside" of the container, while product-card is the full detail of the product
+I want to make the user see the outside first, then the user must hover to see the full product detail
+So the product-info contains the first part of the card, and the product-card contains that first card and the remaining*/
+
+/*The product-container helps the product-card to have a fixed position in the main block*/
+/*The product container*/
+.product-container {
+	/*the product-container helps the product-card to have a position*/
+	position: relative;
+
+	display:block;
+
+	/*height and width is the product-info's plus the 2 times 10px margin*/
+  width: 70%;
+  height: 290px;
+
+	/*margin to help the container distance itself with other elements*/
+  margin: 30px;
+
+  /*no padding and borders since this is just a container*/
+  padding:0;
+  border:none;
+
+  transition: 0.1s;
+}
+
+.product-info {
+	/*if there is no hover, the product-info will appear*/
+  display:block;
+
+  /*product-info fits fully inside the product-container*/
+	position:absolute;
+  top:0;
+  
+  /*height and width nearly identical to the product-container*/
+  /*width identical to the product-card and product-container*/
+  width: 800px;
+  height: 270px;
+
+  /*no need for margin*/
+  margin:0;
+
+  padding:10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+
+  transition: 0.1s;
+}
+
+.product-card {
+	/*if there is no hover, the product-card will not appear*/
+  display:none;
+
+  /*product-info fits fully inside the product-container*/
+  /* also, the position absolute will help the card to not collide with other outside blocks
+  and can appear above those blocks */
+  position:absolute;
+  top:0;
+
+  /*width identical to the product-info and product-container*/
+  width: 800px;
+
+  /*no need for margin*/
+  margin:0;
+  padding:10px;
+
+  transition: 0.1s;
+}
+
+/*when the user hover on the product-container, the product-info will disappear*/
+.product-container:hover .product-info {
+	/*disappear*/
+  display:none;
+}
+
+/*when the user hover on the product-container, the product-info will appear*/
+.product-container:hover .product-card {
+	/*appear*/
+  display:block;
+  /*high z-index helps the card to appear above the blocks that it overlays*/
+  z-index:99;
+  /*auto height, depends on the description length. */
+  /* The description for each product is at least 150 words, so it will be long.*/
+  height:auto;
+  /*card has bigger shadow to the info when appear*/
+  /*this is why I cannot use visibility:hidden; or display:none; on the description block;
+  the description shadow will appear at its border with the top figure*/
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+  /*this ensures that the card will not be transparent:;*/
+  background-color:white;
+}
+
+/*Now onto the parts inside the infos and cards*/
+
+/*The product name*/
+.product-name {
+	text-align:center;
+	margin: 10px;
+}
+
+/*The hr in the cards and infos should have a wide enough margin-bottom*/
+.product-container hr {
+	margin: 10px;
+}
+
+/*Since each product card is a section, there must be a header in each card
+I checked on the validator, and it warns me that sections must have headers
+So if a block is just a container, I will use div instead of section*/
+
+/*Styling the product figure block*/
+.product-figure {
+  display:inline-block;
+  position:relative;
+  vertical-align:top;
+  /*full width*/
+  width:260px;
+  height:200px;
+  clear:both;
+  margin:0;
+  border:none;
+}
+
+/*the product image*/
+.product-figure img {
+	display:block;
+  /*full width*/
+  width:100%;
+  clear:both;
+  /*no margin so that the img can fit*/
+  margin:0;
+  padding:0;
+  border:none;
+} 
+
+/*the product figure caption*/
+.product-figure figcaption {
+	position:absolute;
+	/*bottom:0; to help the figcaption stick to the bottom of the figure block*/
+  bottom:0;
+  display:block;
+  /*full width*/
+  width: 100%;
+  clear:both;
+  /*no margin so that the caption can fit*/
+  margin:0;
+  border:none;
+  text-align:center;
+}
+
+/*The product table of sepcifications*/
+table.product-table-specs {
+	display:inline-block;
+	border-collapse:collapse;
+}
+
+.product-table-specs caption  {
+	/*this ensures that the caption is distance enough from the bottom table*/
+	padding-bottom: 2px;
+}
+
+.product-table-specs th, .product-table-specs td  {
+	/*the borders will be solid black*/
+	border: 1px solid black;
+	/*2px top bottom, 10px to the side*/
+	padding: 2px 10px;
+}
+
+/*the first column is 90px wide*/
+.product-table-specs td:first-child  {
+	width: 90px;
+}
+
+/*the second column is 200px wide*/
+.product-table-specs td:last-child  {
+	width: 200px;
+}
+
+
+/*the head color is black*/
+.product-table-specs thead  {
+	background-color: #16161d;
+	color: white;
+}
+
+/*the body color is white*/
+.product-table-specs tbody  {
+	background-color: #ffffff;
+	color: black;
+}
+
+/*the product buttons container, where users click to buy or enquire*/
+.product-buttons {
+	display:inline-block;
+	/*all inline-blocks in the product-container are aligned at the top*/
+	vertical-align: top;
+	width:180px;
+	/*margin-top to make the buttons "seem" equal in line with the table*/
+	margin-top: 14px;
+	/*no borders for container*/
+	border: none;
+}
+
+/*the form containing the buttons*/
+.product-buttons form {
+	/*display block for it to take up a whole line*/
+	display:block;
+	vertical-align: top;
+
+	/*fullwidth*/
+	width:160px;
+	clear:both;
+
+	/*since the margin is 10px, the width would be 180px minus (2 times 10px)*/
+	margin:10px;
+	padding: 5px;
+	/*no borders*/
+	border: none;
+}
+
+/*the buttons*/
+.product-buttons button {
+	/*display block for it to take up a whole line*/
+	display:block;
+	vertical-align: top;
+
+	/*full width*/
+	width:160px;
+	clear:both;
+
+	/*large enough height*/
+	height: 50px;
+
+	/*no border, add shadows*/
+	border:none;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+	/*black buttons*/
+	background-color: #16161d;
+	color: white;
+	font-size: 1em;
+}
+
+/*the buttons while being hovered*/
+.product-buttons button:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	font-weight:bold;
+	cursor:pointer;
+}
+
+/*there is a p part that ask users to hover or click to see more details*/
+.product-info p {
+	/*fullwitdth block*/
+	display:block;
+	width:100%;
+	clear:both;
+	/*a little bit distanced from the top*/
+	margin-top: 2px;
+	/*center align the text*/
+	text-align: center;
+}
+
+/*the product description, more than 150 words per product*/
+.product-description {
+	/*fullwitdth block*/
+	display:block;
+	width:100%;
+	clear:both;
+	/*margin:0;*/ /*already used in the * selector*/
+	/*2px top padding to make the description title sync with the hover here*/
+	padding: 2px 10px 10px 10px;
+}
+
+/*the title of the description*/
+.product-description h4 {
+	text-align:center;
+}
+
+/*Now onto the big main table*/ 
+#product-table {
+	/*fullwidth block, evenly spaced*/
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /*this helps the table columns to have equal width*/
+  table-layout: fixed; 
+  /*this helps the words inside the cells to break if it overflows*/
+  word-wrap: break-word;
+  
+  /*transition while, after hover*/
+  transition: 0.3s;
+}
+
+/*while the table is being hovered*/
+#product-table:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+/*caption to make it distanced from the table below and the product containers above */
+#product-table caption {
+  margin: 20px;
+}
+
+#product-table th, #product-table td {
+	/* arranging the column width to be in equal size */ 
+  width: 100px;
+  /*equal padding */
+  padding: 10px 10px;
+  /* greyish border */
+  border: 1px solid #ccc;
+  /*middle vertical-align*/
+  vertical-align: middle;
+}
+
+
+#product-table thead {
+	/*table head color is a little bit light black/darker grey*/
+  background-color: #16161d;
+  color: white;
+  font-weight: bold;
+  text-align:center;
+}
+
+#product-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* The 6,7,8,8,10 th row contains the feature that the user can select, 
+so the bullet will be a little bit different */
+#product-table tr:nth-child(6) ul,
+#product-table tr:nth-child(7) ul,
+#product-table tr:nth-child(8) ul,
+#product-table tr:nth-child(9) ul,
+#product-table tr:nth-child(10) ul {
+
+	/* U+2713 is the unicode of the check mark
+	Reference: https://www.compart.com/en/unicode/U+2713 */
+  list-style-type: "\2713. "; /*Add . and space to it to make it look nicer*/
+}
+
+/* Responsive layout when the screen is less than 1300px wide */
+@media screen and (max-width: 1300px) {
+	aside#product-aside {
+		/*no floating*/
+		float:none;
+		/*70% is big enough*/
+		width: 70%;
+		/*no sticky position*/
+		position: static;
+	}
+
+}
+
+
+/* enquire.html */
+
+/*The form's second openning header*/
+#enquiry-form-header {
+	text-align:center;
+	margin: 10px;
+}
+
+/* the enquiry form */
+form#product-enquiry {
+	/*width about 40% of the webpage*/
+	width: 540px;
+	/*clear both sides to center align*/
+	clear:both;
+
+  /*center-align the form*/
+  margin: 2em;
+  margin-left:auto;
+  margin-right:auto;
+
+  /*10px padding*/
+  padding: 10px;
+  /*black thin border with curved corner*/
+  border: 1px solid black;
+  border-radius: 20px;
+  /*shadow for the form*/
+  box-shadow: 0 6px 8px 0 rgba(0,0,0,0.8);  
+}
+
+/* Styling all text parts in the form */
+#product-enquiry * {
+	/*display as blocks*/
+	display:block;
+	/*10px wide pargin*/
+	margin: 10px;
+	/* have a bigger font-size*/
+  font-size: 1em;
+}
+
+
+/*The fieldsets should have a thin black border*/
+#product-enquiry fieldset {
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+/*fieldset legend (label)*/
+#product-enquiry fieldset legend {
+	/*no margins or paddings so that the legend won't affect the filedset padding*/
+  margin:0;
+  padding: 0;
+}
+
+/* Make the tickboxes input (radio, checkbox) "sticked" with the label by displaying them as inline-blocks */
+#product-enquiry .tick-box {
+  display:inline-block;
+  margin: 0px 10px;
+}
+
+/*Making all input types of the form to have padding:10px*/
+#product-enquiry input, #product-enquiry select {
+  padding: 10px;
+}
+
+/*the textarea is covered by a #enquire-textarea block
+make the padding of this block 0 so that it won't affect the textarea inside*/  
+#enquire-textarea {
+	padding:0;
+}
+
+#product-enquiry textarea {
+  /* I tried to make the textarea inside the form block while making its width 100% */
+  /* It doesn't work properly no matter code I used */
+  /* So I have to search on https://stackoverflow.com/questions/3165083/how-to-make-textarea-to-fill-div-block */
+  /* It seems that dimensioning the textarea is a hard problem */
+  /* Reference: https://stackoverflow.com/questions/3165083/how-to-make-textarea-to-fill-div-block */
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+#enquire-buttons {
+	/*flexible block display*/
+	display:flex;
+
+	/*display as a full width block*/
+	width:100%;
+	clear:both;
+
+	/*this down here helps the buttons to stay on a line/row */
+	flex-flow: row;
+
+	/*center the buttons*/
+	justify-content: center;
+	align-items: center;
+
+	/*10px margin*/
+	margin: 10px;
+
+}
+
+/* Styling the Enquire and Reset submit buttons */
+#enquire-buttons input {
+	/*inline-blocks*/
+  display: inline-block;
+  /*equal width for both the buttons */
+  width: 100px;
+  padding: 10px 20px;
+
+  /*no borders, curved corners, shadowy*/
+  border:none;
+  border-radius: 10px;
+  box-shadow: 0  4px 8px 0 rgba(0,0,0,0.2);
+
+  /*purple color with white, centered text*/
+  background-color: purple;
+  color: white;
+  text-align: center;
+
+  /*transition 0.3s while and after hover*/
+  transition: 0.3s;
+}
+
+/*Add hover effects to the buttons*/
+#enquire-buttons input:hover {
+	/*bolder*/
+  font-weight: bold;
+}
+
+/* about.html */
+
+/* My personal info - dl definition list*/
+dl#author-info {
+	/*display the dl as a block, floating left */
+	display: block;
+	float:left;
+	/*with 370px width:*/
+  width: 380px;
+  /*the dt and dd will be in the same line,
+  so the suitable width will help the dt and dd fit in the same line, 
+  and each line will have 1 dt-dd */
+
+  /* margin, padding, border similar to the author-figure's */
+	margin: 80px;
+	padding: 20px;
+	border-style: double;
+}
+
+#author-info dt {
+  display:inline-block;
+  width: 100px;
+  /*dt and dd have equal paddings*/
+  padding: 5px;
+  /*little bit dark yellow*/
+  /*background-color: #dc0;*/
+}
+
+#author-info dd {
+  display:inline-block;
+  /* adjust the width; make sure the total of both is 100% the dl width */
+  width: 250px;
+  /*dt and dd have equal paddings*/
+  padding: 5px;
+  /*light yellow*/
+  /*background-color: #ff0;*/
+}
+
+/* My image. Styling as required. */
+figure#author-image {
+  display: block;
+  /*Styling as required*/
+  float:right;
+  border-style: double;
+  padding: 20px;
+
+ 	/*add margin*/
+  margin: 80px;
+  /*align the figcaption center*/
+  text-align: center;
+}
+
+/* When user hovering the img, the img will expand */
+#author-image img {
+	/* the img will take 0.5s to expand and shrink */
+	transition: 0.5s;
+}
+
+/* When user hovering the img, the img will expand to 1.5 of its original size */
+#author-image img:hover {
+	transform: scale(1.5);
+	cursor:pointer;
+}
+
+/* My timetable */ 
+table#timetable {
+  width: 810px;
+  /*center aligning the table*/
+  margin-left: auto;
+  margin-right: auto;
+  clear:both;
+  /*collapsed border*/
+  border-collapse: collapse;
+  /*shadows to make the table "glow"*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*This makes the word in a table cell wrap if it ever overflows the cell*/
+  word-wrap: break-word;
+}
+
+#timetable caption {
+	/*evenly spacing the caption*/
+  margin: 20px;
+}
+
+/* timetable head will be colored red, 
+similar to Swinburne's color */ 
+#timetable thead {
+  background-color: #ff0000;
+}
+
+/*the body will be colored white*/
+#timetable tbody {
+  background-color: #ffffff;
+}
+
+/*styling all the table-cells*/
+#timetable th, #timetable td {
+	/* arranging the column width  to be in equal size, 
+	except the time column */ 
+  width: 10%;
+
+  /*border and padding of the cells*/
+  border: 1px solid #cccccc;
+  padding: 20px 10px;
+
+  /*center-align the text in the cells*/
+  text-align: center;
+}
+
+/* the first column - time column width will be smaller than other columns */
+#timetable td:first-child {
+  width: 5%;
+}
+
+/* the first column in the tbody - the beginning time of each hour is aligned on top, 
+near the top line (top border) */
+#timetable tbody td:first-child {
+  vertical-align: top;
+  padding-top: 0px;
+}
+
+/* the even columns is colored grey */
+#timetable tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+/* each unit will have a separate color */
+#timetable .cos10003 {
+  background-color: #44ddbb;
+}
+
+#timetable .cos10009 {
+  background-color: #aa88ff;
+}
+
+#timetable .cos10011 {
+  background-color: #ff7777;
+}
+
+#timetable .tne10005 {
+  background-color: #7799dd;
+}
+
+/*All units*/
+#timetable .cos10003, 
+#timetable .cos10009, 
+#timetable .cos10011, 
+#timetable .tne10005 {
+	/*bolder text*/
+	font-weight: bold;
+	/*add some shadows*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	/*the transition while and after hover will take 0.5s*/
+	transition: 0.5s;
+}
+
+/*Hovering the units' cells*/
+#timetable .cos10003:hover, 
+#timetable .cos10009:hover, 
+#timetable .cos10011:hover, 
+#timetable .tne10005:hover {
+	/*the box shadow will be more visible*/
+	box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.6);
+
+	/*the cells will scale up to 1.2 its original size*/
+	transform: scale(1.2);
+
+	/*point to the cells and the mouse will have a pointing hand shape (I use Windows)*/	
+	cursor:pointer;
+}
+
+/*The more information part*/
+#about-more-information {
+	padding: 20px;
+}
+
+#about-more-information * {
+  /*all elements in this section will have margin:6px;*/
+  margin: 6px;
+}
+
+#about-more-information .content-header {
+  /*except the h2. the h2 remains the same*/
+  text-align: center;
+  margin: 20px;
+}
+
+/* enhancements.html */
+
+/*main is where all enhancements details are placed in*/
+#enhancements-html main {
+	/*the main block margin */
+	margin: 20px;
+}
+
+/*all elements in main should have margin of 6px*/
+#enhancements-html main *{
+	margin: 6px;
+}
+
+/*the a links should be underlined to be easy to distinguish*/
+#enhancements-html main a {
+	text-decoration: underline;
+}
+
+/*thr code blocks in enhancements page */
+#enhancements-html pre {
+	display:inline-block;
+	/*limit size*/
+	width:200px;
+	height:200px;
+	padding-left:0;
+	border: 3px solid darkgrey;
+	/*left-align the code*/
+	text-align:left;
+	/*put the code inside the code block */
+	overflow: scroll;
+	/*users can resize the blocks to see the code*/
+	resize: both;
+}

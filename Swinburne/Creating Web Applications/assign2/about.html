@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Assignment 2: Laptop and Computer Purchase Website - About" />
+	<meta name="keywords" content="Assignment 2, Laptop, Computer, Purchase, About, HTML, CSS, Javascript" />
+	<meta name="author" content="Thanh An Nguyen" />
+	<title>About me</title>
+	<link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+	<!-- The entire header will link to the Home page -->
+	<a href="index.html">
+		<!-- The id of the header is "" (none) so that the back to top button will link to the header and the webpage link will not change too much (only a # will appear at the webpage link) -->
+		<header class="top" id="hdr">
+			<img src="images/logoimg.jpg" alt="Logo" id="logoimg" height="70" width="80">		
+			<!--Source: https://media.istockphoto.com/photos/laptop-with-blank-screen-isolated-on-black-background-picture-id1183047088?k=6&m=1183047088&s=612x612&w=0&h=1U0FFG0iIZSWjyF8nTBD0y62Dtk824CjixsLebouF3g=
+				Reference: https://www.istockphoto.com/photos/laptop-black-background -->
+			<h1>EZWeb - Laptop computer purchase website</h1>
+		</header>
+	</a>
+
+	<!-- Top Navigation Menu -->
+	<nav class="top">
+		<!-- This will let the user know which page the user is in (index.html) 
+		The markup will be done in the CSS file  -->
+		<a href="index.html">Home</a> 
+		<a href="product.html">Product</a> 
+		<a href="enquire.html">Enquiry</a> 
+		<a href="about.html" id="inthispage">About</a>
+		<a href="enhancements2.html">Enhancements2</a>
+		<!-- This is the search bar form. Since there are no JavaScript, this will link to my lab.html page -->
+    <form action="lab.html">
+    	<!-- Search input -->
+      <input type="text" placeholder="Type here to search..." name="q" size="36">
+      <!-- Search button -->
+      <button type="submit">Search</button>
+    </form>
+	</nav>
+
+	<!-- h1 content header -->
+	<h1 class="content-header">About me</h1>
+	<hr />
+
+	<!-- My figure -->
+	<figure id="author-image">
+		<!-- My image -->
+		<img src="images/nguyenthanhan.jpg" alt="Thanh An's Image" width="205" height="200">
+		<figcaption>A picture of me!</figcaption>
+	</figure>
+
+	<!-- My information, listed as required -->
+	<dl id="author-info">
+		<dt><strong>Name:</strong></dt>
+		<dd>Thanh An Nguyen</dd>
+		<dt><strong>Student ID:</strong></dt>
+		<dd>s103125896</dd>
+		<dt><strong>Course:</strong></dt>
+		<dd>Bachelor of Computer Science</dd>
+		<dt><strong>Email:</strong></dt>
+		<dd><a href="mailto:103125896@student.swin.edu.au" class="email">103125896@student.swin.edu.au</a></dd>
+	</dl>
+
+	<hr />
+
+	<!-- My timetable. I will display my classes on a timetable, each as consecutive cells in a column.
+	Each class will span from the start date to the end date, therefore rowspans will be 2, 4, or 6  -->
+	<!-- I only go to a class from Monday to Friday, so only days from Monday to Friday are shown  -->
+	<table id="timetable">
+		<caption>
+			<h2>My Timetable</h2>
+		</caption>
+		<thead>
+			<tr>
+				<th>Time</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>10:00</td>
+				<td></td>
+				<td rowspan="4" class="cos10009">COS10009 - Live Online</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>10:30</td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+				<td rowspan="4" class="cos10009">COS10009 - Lab 1 - Help Desk Sessions</td>
+				<td rowspan="4" class="cos10009">COS10009 - Workshop 1</td>
+			</tr>
+			<tr>
+				<td>11:00</td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+				<!-- no cell -->
+				<!-- no cell -->
+			</tr>
+			<tr>
+				<td>11:30</td>
+				<td rowspan="4" class="cos10011">COS10011 - Live Online</td>
+				<!-- no cell -->
+				<td></td>
+				<!-- no cell -->
+				<!-- no cell -->
+			</tr>
+			<tr>
+				<td>12:00</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<!-- no cell -->
+			</tr>
+			<tr>
+				<td>12:30</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<td rowspan="4" class="cos10009">COS10009 - Lab 2 - Tutorial Online</td>
+				<td rowspan="4" class="cos10009">COS10009 - Workshop 2 Online</td>
+			</tr>
+			<tr>
+				<td>13:00</td>
+				<!-- no cell -->
+				<td></td>
+				<td rowspan="4" class="cos10003">COS10003 - Live Online</td>
+				<!-- no cell -->
+				<!-- no cell -->
+			</tr>
+			<tr>
+				<td>13:30</td>
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<!-- no cell -->
+				<!-- no cell -->
+			</tr>
+			<tr>
+				<td>14:00</td>
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<!-- no cell -->
+				<!-- no cell -->
+			</tr>
+			<tr>
+				<td>14:30</td>
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<td rowspan="4" class="cos10003">COS10003 - Tutorial Online</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>15:00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+			</tr>
+			<tr>
+				<td>15:30</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+			</tr>
+			<tr>
+				<td>16:00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+			</tr>
+			<tr>
+				<td>16:30</td>
+				<td rowspan="2" class="cos10011">COS10011 - Lab Online</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>17:00</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>17:30</td>
+				<td rowspan="6" class="tne10005">TNE10005 - Lab Online</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>18:00</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>18:30</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<td rowspan="4" class="tne10005">TNE10005 - Live Online</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>19:00</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+			</tr>
+			<tr>
+				<td>19:30</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+			</tr>
+			<tr>
+				<td>20:00</td>
+				<!-- no cell -->
+				<td></td>
+				<td></td>
+				<!-- no cell -->
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<section id="about-more-information">
+		<hr />
+		<h2 class="content-header">More information</h2>
+		<hr />
+		<ul>
+			<li>
+				<p>I am currently in Hanoi, Vietnam. The timzone here is UTC+7.</p>
+			</li>
+			<li>
+				<p>I am currently studying four base units for my Bachelor of Computer Science Course:</p>
+				<ol>
+					<li>COS10003: Computer and Logic Essentials</li>
+					<li>COS10009: Introduction to Programming</li>
+					<li>COS10011: Creating Web Applications</li>
+					<li>TNE10005: Network Administration</li>
+				</ol>
+			</li>
+			<li>
+				<p>About my first major, I am wondering between Data Science, Software Development and Software Design. My favorite subject in high schools is mathematics. I like math, algorithms and data structures, but I also want to build and invent things like software.</p>
+			</li>
+			<li>
+				<p>For more information, you can email me at <a href="mailto:103125896@student.swin.edu.au" class="email">103125896@student.swin.edu.au</a>.</p>
+			</li>
+		</ul>
+	</section>
+	
+
+  <!-- The footer -->
+	<footer>
+		<hr />
+		<!-- Author (my) information -->
+		<p>Create by: Thanh An Nguyen. ID: 103125896.</p>
+		<!-- Author email -->
+		<p>Email: <a href="mailto:103125896@student.swin.edu.au" class="email">103125896@student.swin.edu.au</a></p>
+		<!-- Disclaimer. Reference: -->
+		<p>All names, characters, and events portrayed in this webpage are fictional.<br /> 
+		Any similarity with other creative or real events or characters are purely coincidental.</p>
+		<!-- The back to top button -->
+		<a href="#hdr" id="backtotop">Back to top</a>
+	</footer>
+</body>
