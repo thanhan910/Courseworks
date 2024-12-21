@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\MrAn\\.nuget\\packages\\": {}
+    "C:\\Users\\An\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MrAn\\Documents\\Swinburne\\COS20007\\GeometryDraw\\GeometryDraw\\GeometryDraw.csproj",
+      "projectUniqueName": "C:\\Users\\An\\Documents\\GitHub\\Courseworks\\Object Oriented Programming\\GeometryDraw\\GeometryDraw.csproj",
       "projectName": "GeometryDraw",
-      "projectPath": "C:\\Users\\MrAn\\Documents\\Swinburne\\COS20007\\GeometryDraw\\GeometryDraw\\GeometryDraw.csproj",
-      "packagesPath": "C:\\Users\\MrAn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MrAn\\Documents\\Swinburne\\COS20007\\GeometryDraw\\GeometryDraw\\obj\\",
+      "projectPath": "C:\\Users\\An\\Documents\\GitHub\\Courseworks\\Object Oriented Programming\\GeometryDraw\\GeometryDraw.csproj",
+      "packagesPath": "C:\\Users\\An\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\An\\Documents\\GitHub\\Courseworks\\Object Oriented Programming\\GeometryDraw\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MrAn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\An\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,6 +40,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -51,16 +56,35 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "SiIoOn/te5GyQYpnrof0laFiImh7UDAWDrOBz/8nuwZP2q/5PcW0Xnc61Qu7Gki4zO0jiVjkcEiph1IY/YZt6Q==",
+  "dgSpecHash": "O5rDEjD1LiOturahyaPPNK7t/G4y0lyygmSDhcYs8603/3PKqWQmSb33doAxjrNoJtjHmSyfRDDr0dOSRTlsKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MrAn\\Documents\\Swinburne\\COS20007\\GeometryDraw\\GeometryDraw\\GeometryDraw.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\An\\Documents\\GitHub\\Courseworks\\Object Oriented Programming\\GeometryDraw\\GeometryDraw.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\An\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\An\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\An\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\An\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
